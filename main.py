@@ -24,3 +24,4 @@ def check():
             send_to_slack(msg)
 
 check()
+send_to_slack("🚨 Test message: Fox News bot is live!")
