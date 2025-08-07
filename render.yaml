@@ -1,0 +1,7 @@
+services:
+  - type: worker
+    name: trump-alert-bot
+    runtime: python
+    buildCommand: ""
+    startCommand: "python main.py"
+    autoDeploy: true
