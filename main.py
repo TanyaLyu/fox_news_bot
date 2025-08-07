@@ -22,6 +22,5 @@ def check():
     for msg in messages:
         if any(word in msg.lower() for word in keywords):
             send_to_slack(msg)
-
-check()
 send_to_slack("🚨 Test message: Fox News bot is live!")
+check()
