@@ -1,7 +1,7 @@
 import time
 import requests
 
-SLACK_WEBHOOK_URL = "https://hooks.slack.com/services/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"
+SLACK_WEBHOOK_URL = "https://hooks.slack.com/services/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"
 
 messages = [
     "Trump says 60% tariffs are coming for Chinese EVs",
