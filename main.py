@@ -2,7 +2,7 @@ import time
 import requests
 
 # Replace this with your actual Slack webhook when ready
-SLACK_WEBHOOK_URL = "https://hooks.slack.com/services/YOUR/WEBHOOK/HERE"
+SLACK_WEBHOOK_URL = "https://hooks.slack.com/services/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"
 
 messages = [
     "Trump says 60% tariffs are coming for Chinese EVs",
