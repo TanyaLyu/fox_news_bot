@@ -1,7 +1,6 @@
 import time
 import requests
 
-# Replace this with your actual Slack webhook when ready
 SLACK_WEBHOOK_URL = "https://hooks.slack.com/services/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"
 
 messages = [
@@ -16,11 +15,20 @@ keywords = ["tariff", "China", "oil", "sanction", "interest", "Powell", "border"
 
 def send_to_slack(text):
     payload = {"text": f"🚨 Trump Alert: {text}"}
-    requests.post(SLACK_WEBHOOK_URL, json=payload)
+    try:
+        response = requests.post(SLACK_WEBHOOK_URL, json=payload)
+        print(f"✅ Sent to Slack: {text} | Status: {response.status_code}")
+        print(f"Response content: {response.text}")
+    except Exception as e:
+        print(f"❌ Slack error: {e}")
 
 def check():
     for msg in messages:
         if any(word in msg.lower() for word in keywords):
             send_to_slack(msg)
+
 send_to_slack("🚨 Test message: Fox News bot is live!")
 check()
+
+print("✅ Script completed. Sleeping to keep logs open...")
+time.sleep(15)
